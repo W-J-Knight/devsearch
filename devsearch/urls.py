@@ -20,11 +20,11 @@ from django.http import HttpResponse
 def projects(request):
     return HttpResponse('Here are our projects')
 
-def project(request):
+def project(request, pk):
     return HttpResponse('SINGLE PRODUCT')
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("projects/", projects, name="projects"), 
-    path("project/", project, name="project"), 
+    path("project/<str:pk>", project, name="project"), 
 ]
