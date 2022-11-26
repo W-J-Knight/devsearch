@@ -12,6 +12,10 @@
 {% else  %}
 <p>Number is less than 10</p>
 {%endif  %}
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat necessitatibus modi doloribus et laboriosam quod, ex nesciunt reiciendis exercitationem quidem, expedita repudiandae sit praesentium rem tempore quo ratione quibusdam deserunt?</p>
-
+<h1>Projects</h1>
+<ul>
+{% for project in projects %}
+    <li>Title: {{project.title}} --- {{project.description}}</li>
+{% endfor %}
+</ul>
 {% endblock content %}
