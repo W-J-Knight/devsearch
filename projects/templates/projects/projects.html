@@ -1,7 +1,17 @@
 {% extends 'main.html' %}
 
+
 {% block content %}
 <h1>Projects Template</h1>
+<p>Hello you are on {{page}} page</p>
+
+{% if number > 10 %}
+<p>Number is greater then 10</p>
+{% elif number == 10 %}
+<p>Number is exactly 10</p>
+{% else  %}
+<p>Number is less than 10</p>
+{%endif  %}
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat necessitatibus modi doloribus et laboriosam quod, ex nesciunt reiciendis exercitationem quidem, expedita repudiandae sit praesentium rem tempore quo ratione quibusdam deserunt?</p>
 
 {% endblock content %}
