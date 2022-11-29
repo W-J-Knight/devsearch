@@ -3,19 +3,11 @@
 
 {% block content %}
 <h1>Projects Template</h1>
-<p>Hello you are on {{page}} page</p>
 
-{% if number > 10 %}
-<p>Number is greater then 10</p>
-{% elif number == 10 %}
-<p>Number is exactly 10</p>
-{% else  %}
-<p>Number is less than 10</p>
-{%endif  %}
 <h1>Projects</h1>
 <ul>
 {% for project in projects %}
-    <li><a href="{% url 'project' project.id%}">Title: {{project.title}}</a> --- {{project.description}}</li>
+    <li><a href="{% url 'project' project.id%}">Title: {{project.title}}</a> --- {{project.created}}</li>
 {% endfor %}
 </ul>
 {% endblock content %}
