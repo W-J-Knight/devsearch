@@ -4,7 +4,11 @@
 <h1>Project Form</h1>
 <form method="POST">
     {%csrf_token%}
-    {{form.as_p}}
+    <!-- {{form.as_p}} -->
+    {{form.title.label}}
+    {{form.title}}
+    {{form.description.label}}
+    {{form.description}} 
     <input type="submit" >
 </form>
 {% endblock content %}
