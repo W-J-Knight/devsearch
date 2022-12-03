@@ -18,6 +18,11 @@ def project(request, pk):
 
 
 def createProject(request):
-    form = ProjectForm
+    form = ProjectForm()
+    if request.method == 'POST':
+        # print(request.POST)
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            form.save()
     context = {'form': form}
     return render(request, 'projects/project_form.html', context)
